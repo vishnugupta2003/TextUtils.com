@@ -4,7 +4,7 @@ import About from './about.jsx';
 import React, { useState } from 'react';
 import Alert from './alert.jsx';
 import TextForm from './TextForm.jsx';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 const App = () => {
   const [mode, setMode] = useState('light');
@@ -41,43 +41,43 @@ const App = () => {
 
   return (
     <>
-      <Router>
-        <Navbar
-          title='TextConverter'
-          aboutTest='About TextConverter'
-          mode={mode}
-          toggleMode={toggleMode}
-          showAlert={showAlert}
-        />
-        <Alert alert={alert} />
-        {/* <Navbar title = "Techsimplus"   /> */}
-        {/* <Navbar title ={6564}   />    /*give error type string but you are giving number. */}
-        {/* <Navbar  /> */}
+      {/* <Router> */}
+      <Navbar
+        title='TextConverter'
+        aboutTest='About TextConverter'
+        mode={mode}
+        toggleMode={toggleMode}
+        showAlert={showAlert}
+      />
+      <Alert alert={alert} />
+      {/* <Navbar title = "Techsimplus"   /> */}
+      {/* <Navbar title ={6564}   />    /*give error type string but you are giving number. */}
+      {/* <Navbar  /> */}
 
-        {/* <div className="container my-3">
+      {/* <div className="container my-3">
       <Practice title="Techsimplus" about="about techsimplus" heading="Enter the text to Analyze" />
       </div> */}
 
-        {/* <About/> */}
-        <div className='container my-3'>
-          <Switch>
-            {/* react always do partial matching that means this always show component 1 if you go exact component so use exact keyword before path */}
-            {/* '/user'--> component 1
+      {/* <About mode={mode} /> */}
+      <div className='container my-3'>
+        {/* <Switch> */}
+        {/* react always do partial matching that means this always show component 1 if you go exact component so use exact keyword before path */}
+        {/* '/user'--> component 1
             '/user/home' --> component 2 */}
-            <Route exact path='/about'>
+        {/* <Route exact path='/about'>
               <About />
             </Route>
-            <Route exact path='/'>
-              <TextForm
-                showAlert={showAlert}
-                heading=' Enter the text to Analyze'
-                mode={mode}
-              />
-            </Route>
-          </Switch>
-          {/* my-3 is use for give spacing on y-axis like margin top */}
-        </div>
-      </Router>
+            <Route exact path='/'> */}
+        <TextForm
+          showAlert={showAlert}
+          heading=' Try textConverter for convert text in upperCase, lowerCase, Remove Extra space'
+          mode={mode}
+        />
+        {/* </Route>
+          </Switch> */}
+        {/* my-3 is use for give spacing on y-axis like margin top */}
+      </div>
+      {/* </Router> */}
     </>
   );
 };
