@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './Navbar';
 import Practice from './practice';
-import About from './about.jsx';
+import About from './user/about.jsx';
 import React, { useState } from 'react';
 import Alert from './alert.jsx';
 import TextForm from './TextForm.jsx';
