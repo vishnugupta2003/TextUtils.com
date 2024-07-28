@@ -13,7 +13,7 @@ const Navbar = (props) => {
           {/* <Link className='navbar-brand' to='/'>
             {props.title}
           </Link> */}
-          <a className='navbar-brand' href='#'>
+          <a className='navbar-brand' href='/home'>
             {props.title}
           </a>
           <button
